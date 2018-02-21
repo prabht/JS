@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //hoisting taking declaration on the top 
+        // add(10,4334);
+        // function add(x,y){
+        //    var res=x+y;
+        //   alert(res);
+
+        // }   
+        
+        // var add=function(x,y){
+        //     var res=x+y;
+        //     alert(res);
+        // }
+        // add(2,3);
+
+        //iife
+           
+        (function(x,y){
+            var res=x+y;
+            alert(res);
+        })("hi"," bye");
+
+        function foo(){
+            // var x=10;
+            // var y=20;
+            alert("z:"+z);
+            {   
+                var z=30;
+                alert("g:"+g);
+            alert("z:"+z);
+            }
+        }
+foo();
+alert("g:"+g); 
+var g=10;
+// alert("y:"+y);
+
+    </script>
+
+
+</head>
+    <body>
+    
+    </body>
+</html>

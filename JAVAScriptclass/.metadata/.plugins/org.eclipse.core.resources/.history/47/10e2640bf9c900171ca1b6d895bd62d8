@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<table>
+	<tr>
+		<td><label>Username</label></td>
+		<td><input type="text"	id="username" /></td>
+	</tr>
+	
+	<tr><td><label>Password</label></td>
+		<td><input type="text"	id="pass" /></td>
+	</tr>
+</table>
+<script>
+
+
+document.getElementById("pass").onblur=getempdetails;
+
+function getempdetails(){
+	
+	xml=new XMLHttpRequest();
+	
+	var empid=document.getElementById("username").value;
+	var pass=document.getElementById("pass").value;
+	var url="requestProcessor.jsp";
+	
+	xml.open("POST",url,true);
+	
+	xml.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+	xml.onreadystatechange=handleResponse;
+	
+	
+	var data="username="+empid+"&pass="+pass;
+	
+	xml.send(data);
+
+}
+
+function handleResponse(){
+	
+	if( xml.status==200){
+		var response=xml.responseText;
+		console.log(response);	
+	
+		
+	}
+}
+</script>	
+</body>
+</html>

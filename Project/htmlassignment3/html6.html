@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <audio src="media/guitar.mp3" controls id="a">NOT SUPPORTED</audio>
+    <button id="bi">increase</button>
+    <button id="bd">decrease</button>
+    <button id="play">play</button>
+    <script>
+        window.onload = function () {
+            var vid = document.getElementById("a");
+            $("#play").click(function () {
+                if (vid.paused) {
+                    vid.play(); $("#play").text("pause");
+                } else {
+                    vid.pause();
+                    $("#play").text("play");
+                }
+            })
+
+            $("#bi").click(function () {
+                if(vid .volume == 1.0){
+			alert("Volume is max.");
+		}
+		else{
+			vid.volume += 0.1;
+		}
+            })
+            $("#bd").click(function () {
+                if(vid.volume == 0.0){
+			alert("Volume is min.");
+		}
+		else{
+			vid.volume -= 0.1;
+		}
+            })
+        }
+    </script>
+</body>
+
+</html>

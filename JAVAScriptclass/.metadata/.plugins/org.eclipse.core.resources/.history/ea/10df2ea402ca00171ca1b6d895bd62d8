@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+	<table>
+		<tbody>
+			<tr>
+				<th>Personal Details</th>
+				<th><button>Get Personal Details</button></th>
+			</tr>
+			<tr>
+				<td>First Name:</td>
+				<td><input type="text" id="fname" /></td>
+
+			</tr>
+			<tr>
+				<td>Last Name:</td>
+				<td><input type="text" id="lname" /></td>
+
+			</tr>
+			<tr>
+
+
+				<td>City:</td>
+				<td><input type="text" id="city" /></td>
+			
+
+			</tr>
+			<tr>
+				<td>Contact:</td>
+				<td><input type="text" id="contact" /></td>
+
+			</tr>
+		</tbody>
+	</table>
+
+	<br>
+	<br>
+
+	<table>
+		<tbody>
+			<tr>
+				<th>Project Details</th>
+				<th><button>Get Project Details</button></th>
+			</tr>
+			<tr>
+				<td>Project Id:</td>
+				<td><input type="text" id="pid" /></td>
+
+			</tr>
+			<tr>
+				<td>Project Location:</td>
+				<td><input type="text" id="pname" /></td>
+
+			</tr>
+
+		</tbody>
+	</table>
+
+	<script>
+		document.getElementsByTagName("button")[0].onclick = xmlFunction;
+		document.getElementsByTagName("button")[1].onclick = jsonFunction;
+
+		function xmlFunction() {
+
+			//1) Create/initialise xmlhttpRequestObject
+
+			xmlhttp1 = new XMLHttpRequest();
+
+			//3) create url
+
+			var url = "XML.jsp";
+
+			//4) Open a connection to server
+
+			xmlhttp1.open("GET", url, true);
+
+			//5) Event handler against readystate
+
+			xmlhttp1.onreadystatechange = processResponse1;
+
+			//6) Send data
+			xmlhttp1.send();
+
+		}
+		function jsonFunction() {
+
+			//1) Create/initialise xmlhttpRequestObject
+
+			xmlhttp2 = new XMLHttpRequest();
+
+			//3) create url
+
+			var url = "JSON.jsp";
+
+			//4) Open a connection to server
+
+			xmlhttp2.open("GET", url, true);
+
+			//5) Event handler against readystate
+
+			xmlhttp2.onreadystatechange = processResponse2;
+
+			//6) Send data
+			xmlhttp2.send();
+
+		}
+
+		function processResponse1() {
+			if (xmlhttp1.readyState == 4 && xmlhttp1.status == 200) {
+				var response = xmlhttp1.responseXML;
+				var string1 = response.getElementsByTagName("fname")[0].childNodes[0].nodeValue;
+				var string2 = response.getElementsByTagName("lname")[0].childNodes[0].nodeValue;
+				var string3 = response.getElementsByTagName("city")[0].childNodes[0].nodeValue;
+				var string4 = response.getElementsByTagName("contact")[0].childNodes[0].nodeValue;
+
+				document.getElementById("fname").value = string1;
+				document.getElementById("lname").value = string2;
+				document.getElementById("city").value = string3;
+				document.getElementById("contact").value = string4;
+
+			}
+		}
+		function processResponse2() {
+			if (xmlhttp2.readyState == 4 && xmlhttp2.status == 200) {
+				var response = xmlhttp2.responseText;
+				var obj = JSON.parse(response);
+				console.log(obj);
+				document.getElementById("pid").value = obj.pid;
+				document.getElementById("pname").value = obj.pname;
+
+			}
+		}
+	</script>
+</body>
+</html>

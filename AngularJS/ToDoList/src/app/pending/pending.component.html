@@ -1,0 +1,12 @@
+<p>
+  Hey {{uname}} this is the pending List  
+</p>
+    <ul class="list-group">
+
+        <li class="list-group-item"*ngFor="let i of pitems;let in=index;">
+      {{i.title}}
+      {{i.creationdate|date:'short'}}
+      {{i.duedate|date:'short'}}</li>
+      
+       </ul>
+

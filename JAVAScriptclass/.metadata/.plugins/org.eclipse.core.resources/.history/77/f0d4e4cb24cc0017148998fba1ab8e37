@@ -1,0 +1,11 @@
+
+
+//    for (var i = 0; i < 1000000000; i++) {
+//        var no=i;
+//        
+//    }
+// postMessage(no);
+ for (var i = 1; i <document.getElementById("i1").Value() ; i++) {
+     if(i%2!=0)
+     postMessage(i);
+ }

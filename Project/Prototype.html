@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(n){
+            this.name=n;            //constructor level properties
+            this.showName=function(){
+                alert(this.name);
+            }
+        }
+
+        var per1=new Person('Yondu');
+        var per2=new Person('Starlord');
+        
+        per1.showName();
+        per2.showName();
+            
+        per1.display=function(){
+            alert("GUARDIANS of the Galaxy");
+        }
+        per1.display();
+
+        Person.prototype.displayCity=function(x){
+            alert(x);
+
+        }
+        per1.displayCity("hey yondu");
+        per2.displayCity("hey starlord");
+
+    </script>
+</body>
+</html>

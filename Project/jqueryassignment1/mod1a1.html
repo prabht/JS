@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    
+<script>
+    $(document).ready(function(){
+        $("#1p").css("background","red");
+        $("p:odd").css("background","yellow");
+        $("p:last").css("background","green");
+        
+    });
+
+</script>
+
+</head>
+<body>
+    <div>
+        <p id="1p">1st para</p>
+        <p>2nd para</p>
+        <p>3rd para</p>
+    </div>
+</body>
+</html>

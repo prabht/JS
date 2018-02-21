@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    window.onload = function () {
+        var f = document.getElementById("d1");
+        var e = document.getElementById("empty");
+        var i1 = document.getElementById("1");
+        var i2 = document.getElementById("2");
+        var i3 = document.getElementById("3");
+        var i4 = document.getElementById("4");
+        var i5 = document.getElementById("5");
+        var i6 = document.getElementById("6");
+
+        i1.addEventListener("click", get1, true);
+        i2.addEventListener("click", get2, true);
+        i3.addEventListener("click", get3, true);
+        i4.addEventListener("click", get4, true);
+        i5.addEventListener("click", get5, true);
+        i6.addEventListener("click", get6, true);
+
+
+        function get1() {
+            if (e.childNodes.length < 3)
+                e.appendChild(i1);
+            else {
+                console.log("cannot add");
+            }
+        }
+        function get2() {
+            if (e.childNodes.length < 3)
+                e.appendChild(i2); else {
+                console.log("cannot add");
+            }
+        } function get3() {
+            if (e.childNodes.length < 3)
+                e.appendChild(i3); else {
+                console.log("cannot add");
+            }
+        } function get4() {
+            if (e.childNodes.length < 3)
+                e.appendChild(i4); else {
+                console.log("cannot add");
+            }
+        } function get5() {
+            if (e.childNodes.length < 3)
+                e.appendChild(i5); else {
+                console.log("cannot add");
+            }
+        } function get6() {
+            if (e.childNodes.length < 3)
+                e.appendChild(i6); else {
+                console.log("cannot add");
+            }
+        }
+
+
+    }
+</script>
+
+<body>
+    <div id="d1">
+        <img id="1" src="C:\Users\Public\Pictures\Sample Pictures\Chrysanthemum.jpg " style="height: 100px;width:100 px" />
+        <img id="2" src="C:\Users\Public\Pictures\Sample Pictures\Desert.jpg" style="height: 100px;width:100 px" />
+        <img id="3" src="C:\Users\Public\Pictures\Sample Pictures\Jellyfish.jpg" style="height: 100px;width:100 px" />
+        <img id="4" src="C:\Users\Public\Pictures\Sample Pictures\Penguins.jpg" style="height: 100px;width:100 px" />
+        <img id="5" src="C:\Users\Public\Pictures\Sample Pictures\Lighthouse.jpg" style="height: 100px;width:100 px" />
+        <img id="6" src="C:\Users\Public\Pictures\Sample Pictures\Tulips.jpg" style="height: 100px;width:100 px" />
+    </div>
+
+    <div id="empty"></div>
+
+
+</body>
+
+</html>

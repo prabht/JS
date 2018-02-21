@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+
+</head>
+<body>
+    <script>
+    function Parent(name){
+        this.name=name;
+        this.location=['Goa','Pune'];
+        this.show=function(){
+            return this.name;
+        }
+    }
+
+    Parent.prototype.display=function(){
+        alert("i am at prototype level");
+    }
+
+    //Derived class 
+    function child(n){
+        //constructor stealing or classical inheritance
+        Parent.call(this,n);//can use apply
+        //Parent.apply(this,[n,r,e]);//only syntax is different as u need a array to be passed
+    }
+
+
+    var child1=new child("dfdf");
+    var child2=new child("sdsf");   
+    child1.location.push('Nagpur'); 
+    
+    alert(child1.show());
+    alert(child2.show());
+    alert(child1.location);
+    alert(child2.location);
+s    
+
+
+    
+    </script>
+
+</body>
+</html>

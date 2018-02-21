@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<p>
+  Hey {{uname}} Check the todolist!
+</p>
+Title:<input type="text" #to (keyup.enter)="addItem(to.value)">
+<button (click)="addItem(to.value)">Add</button>
+
+<ul>
+<li *ngFor="let i of td.todoitems;let in=index;">
+    {{i.title}}
+    {{i.completed}}
+    <button (click)="delItem(in)">delete</button>
+    <input type="checkbox" (click)="markDone(in)" [checked]="i.done">
+</li>
+
+</ul>
+
+
+
+<!-- <a routerLink="completed">Completed</a>
+<a routerLink="pending">Pending</a>
+<router-outlet></router-outlet> -->
+

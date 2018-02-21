@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Web Storage</title>
+</head>
+<body>
+<script type="text/javascript">
+/* if(sessionStorage.visitorHits){
+	document.write("Visitor Hits:"+(sessionStorage.visitorHits=Number(sessionStorage.visitorHits)+1));
+}
+else{
+	document.write("Visitor Hits:"+(sessionStorage.visitorHits=1));
+} */
+sessionStorage.removeItem('visitorHits');
+sessionStorage.clear();
+</script>
+</body>
+</html>

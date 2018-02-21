@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    
+</head>
+<body>
+    <input id="i1" type="text"/>
+    <input id="start" type="submit" onclick="bigloop()">start</button>
+    <button id="stop">stop</button>
+    <div></div>
+    <script>
+    localStorage.setItem("c",$("#i1").val());
+	alert(localStorage.getItem("c"));
+        function bigloop() {
+            var worker = new Worker('html3.js');
+            worker.onmessage= function (event) {
+                $("div").append(event.data);        
+            }
+        }
+        // $("#start").click(function odd(){console.log("hi")
+        //     var wo = new Worker('html3.js');
+        //     wo.onmessage() = function (event) {
+        //         console.log("hi")
+        //         $("div").append(event.data);
+        //         alert(event.data);
+        //     }
+        // })
+    
+        
+    
+    </script>
+</body>
+</html>

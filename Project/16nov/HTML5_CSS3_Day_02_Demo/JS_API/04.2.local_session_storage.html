@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+			if(window.Storage){
+			var name = sessionStorage.getItem("uname");
+				$("#userName").html(name);
+			}
+			else{
+				alert("Not Supported By Browser");
+			}
+			
+			$("#myBtn").click(function(){
+				sessionStorage.clear(); 
+				$('#userName').html("");
+			});
+});
+</script>
+</head>
+<body>
+<h3>Welcome <span id="userName"></span></h3> 
+<input type="submit" id="myBtn" value="Sign Out">
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    /* selecting multiple elements */
+    /* p,div{
+        color:blue
+    } */
+/*descendant selector*/
+/* div p{
+    border:2px solid black;
+} */
+/*child selectors*/
+/* ul li{
+    border:2px solid
+
+} */
+/* div>p{
+    border:2px solid
+} */
+/* sibling selector */
+/* ul~div{
+    border:2px solid;
+} */
+/* adjacent sibling*/
+/* ul+div{
+    border:2px solid;
+} */
+
+/* pseudo classes define some special state of an element */
+/* div:hover{
+    background: red
+} */
+/* state is link,hover and visited */
+/* a:link{
+    color:red;
+}
+a:hover{
+    color: black
+}
+a:visited{
+    color: blue
+} */
+/* p:first-child{
+    color: greenyellow
+} */
+/* ul:only-of-type{
+    border: 2px solid
+} */
+/* peudo elements define specific part of an element */
+
+/* p::first-letter{
+    color: red
+
+} */
+/* p::first-line{
+    color: red;
+    font-family: Arial, Helvetica, sans-serif
+
+} */
+/* h1::before{
+    content:url("Desert.jpg");
+} */
+h1{
+    height: 500px;
+}
+/* h1::after{
+    content:url("Desert.jpg");
+} */
+
+::selection{
+    background-color: aqua;
+}
+
+</style>
+<body>
+    <h1 height="300px">helolo</h1>
+    <ul id="list">
+        <li class="a">item1</li>
+        <li class="a">item2</li>
+        <li class="b">item3</li>
+        <li class="b">item4</li>
+        <li>item5</li>
+    </ul>
+    
+    <div>
+        this is div1
+        <br/>
+        <br/>
+        <br/>
+        <p>
+            i am nested p!
+        </p>
+    </div>
+    <p class="a">
+        this is para1
+        <div>
+            this is div2 inside p1
+        </div>
+    </p>
+    <div>
+        <p id="para1">
+            this is para2
+        </p>
+    </div>
+    <p class="b">
+        this is para3!
+        <p>nested first para</p>
+        <p>nested second para</p>
+    </p>
+    <div>
+        this is div3
+    </div>
+    <p>
+        this is another para.
+    </br>including break tag in between.
+    </p>
+    <p>last para</p>
+
+    <a href="https://www.google.com">this is a link</a>
+</body>
+
+</html>

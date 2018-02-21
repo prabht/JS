@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    window.onload= function () {
+        var i = document.getElementsByTagName("img");
+        //  i[0].addEventListener("click",bimage,true);
+        
+        document.getElementsByTagName("img")[0].addEventListener("click", cimage, true);
+        document.getElementsByTagName("Button")[0].addEventListener("click", btn, true);
+        document.getElementsByTagName("div")[0].addEventListener("click", divi, true);
+        function cimage() {
+            console.log(" img clicked");
+        }
+        function btn() {
+            console.log(" button clicked");
+        }
+        function divi() {
+            console.log(" div clicked");
+        }
+
+      
+        document.getElementsByTagName("img")[0].addEventListener("click", cimage, false);
+        document.getElementsByTagName("Button")[0].addEventListener("click", btn, false);
+        document.getElementsByTagName("div")[0].addEventListener("click", divi, false);
+        function cimage() {
+           
+            console.log(" img clicked");
+        }
+        function btn() {
+            console.log(" button clicked");
+        }
+        function divi() {
+            console.log(" div clicked");
+        }
+    }
+
+</script>
+
+<body>
+    <div style="padding:30px;">
+        <Button>
+            <img src='c:\JS\Project\day3 Assignments\Desert.jpg' style="width: 100px; height: 100px;"></img>
+        </Button>
+    </div>
+
+</body>
+
+</html>

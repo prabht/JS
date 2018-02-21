@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#w").append(localStorage.getItem(name));
+	var i=1;
+	$("li").click(function(){
+		sessionStorage.setItem("I"+i,$(this).text())
+		$("#items").append($(this).clone());i++;
+
+	})
+	
+	window.onunload=function(){
+		for (var j = 1; j < sessionStorage.length; j++) {
+			localStorage.setItem("I"+j,sessionStorage.getItem("I"+j));
+		
+	}
+	sessionStorage.clear();
+
+
+	}
+})
+
+
+</script>
+</head>
+
+<body>
+<div id="w">Welcome </div>
+<ul>
+	<li>a</li>
+	<li>b</li>
+	<li>c</li>
+	<li>d</li>
+	<li>e</li>
+	<li>f</li>
+</ul>
+<div id="items">Selected Items</div>
+
+</body>
+</html>

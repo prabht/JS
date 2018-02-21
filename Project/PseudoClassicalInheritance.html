@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //using advantages of both
+    function Human(n){
+    this.name=n;
+
+    }
+
+    Human.prototype.speak=function(){
+       alert("i speak what i want");
+    }
+    
+    Human.prototype.intro=function(){
+        alert("hi i am"+this.name);
+    }
+    function Student(sch,cou,n){
+    
+        Human.call(this,n);  
+        this.school=sch;
+        this.courses=cou;
+    }
+    Student.prototype.takeexam=function(){
+        return "this is exam time!!!!!!!";
+    }
+
+    Human.prototype.intro=function(){
+        alert("Name:"+this.name+" school: "+this.school+" Courses:"+this.courses);
+    }
+     Student.prototype=new Human();
+
+     Student.prototype.constructor=Student;
+
+    var stu=new Student("SCHOOL!","computer","JOHN");
+    
+    stu.intro();
+    
+    
+
+    </script>
+</body>
+</html>

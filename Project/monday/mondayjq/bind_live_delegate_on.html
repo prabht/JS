@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+    <script>
+        $(function () {
+
+            // $("#add").click(function () {
+            //     $("body").append("<div>Dynamic div</div>");
+
+            // });
+
+            //     $("div").bind("click",clicked);
+
+            //     function clicked(){
+            //             alert("div clicked")
+            //     }
+            // });
+
+            //$("div").live("click",clicked);
+
+          //  $("body").delegate("div", "click", clicked);
+           //$("body").on("click", "div", clicked);
+            
+            $("body").one("click","div",clicked);
+            $("#add").click(function () {
+                $("body").append("<div>Dynamic div</div>");
+
+            });
+            function clicked() {
+                alert("div clicked")
+               // $("body").off("click");
+               
+            }
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <div>static div</div>
+    <button id="add">ADd</button>
+</body>
+
+</html>

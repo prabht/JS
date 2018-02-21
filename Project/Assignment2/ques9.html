@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script>
+
+    $(function () {
+       $("body").click(function(e){
+           alert("name:"+e.target.nodeName+"no.children:"+e.target.childNodes.length);
+       })
+    })
+
+</script>
+
+<body>
+    <ul>dnjhyduj
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+        <li>list5</li>
+        <li>list6</li>        
+    </ul>
+    <div id="div1">div1</div>
+    <div id="div2">div2</div>
+    <div id="div3">div3</div>
+
+    <p="p1">para1</p>
+    <p="p2">para2</p>
+    <p="p3">para3</p>
+</body>
+
+</html>

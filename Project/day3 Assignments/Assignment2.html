@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+    <table id="t">
+        <tr>
+            <td><p>Employee ID</p></td>
+            <td><p>1</p></td>
+            <td><p>2</p></td>
+        </tr>
+        <tr>
+            <td><p>Employee Name</p></td>
+            <td><p>name1</p></td>
+            <td><p>name2</p></td>
+        </tr>
+        <tr>
+            <td><p>Employee Company</p></td>
+            <td><p>company1</p></td>
+            <td><p>company2</p></td> 
+        </tr>
+    </table>
+    <script>
+            var t=document.getElementById("t");
+                for(i=0;i<t.childNodes[1].childNodes.length;i=i+4){
+                  console.log(t.childNodes[1].childNodes[i]);
+                  t.childNodes[1].childNodes[i].childNodes[1].childNodes[0].style.color="red";
+                  if(i==0)
+                  t.childNodes[1].childNodes[i+2].childNodes[1].childNodes[0].style.color="blue";
+                  for(j=0;j<)
+                  
+                  }
+// console.log(t.childNodes[1].childNodes[i]);
+//                 for(i=0;i<t.childNodes[1].childNodes.length;i=i+4){
+//                   console.log(t.childNodes[1].childNodes[i]);
+//                   for(j=2;j<t.childNodes[1].childNodes[i].length;j++){
+//                   t.childNodes[1].childNodes[i].childNodes[1].childNodes[0].style.color="red";
+//                   t.childNodes[1].childNodes[i+2].childNodes[1].childNodes[0].style.color="blue";
+//                   }
+//                 }
+                    
+         
+            </script>
+    </body>
+</html>

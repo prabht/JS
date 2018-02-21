@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #animate {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  background-color:blue;
+}
+    </style>
+</head>
+<body>
+        <div id ="animate"></div>
+        <script>
+            // window.onload=init;
+            // function init(){
+       var st= document.getElementById("animate");
+       
+       var pos1=0;
+       var id = setInterval(frame, 2);
+       //var pos=window.innerWidth;
+       
+       
+       function frame() {   
+         if (pos1 == window.innerWidth) {
+             id1=setInterval(moveleft,2);
+             clearInterval(id);
+         } else {
+           pos1++; 
+           st.style.left = pos1 + 'px'; 
+         }
+       }
+       
+         function moveleft()
+    {
+        if (pos1 == 0) {
+            id = setInterval(frame, 2);
+           clearInterval(id1);
+           //frame();
+          } else {
+          pos1--; 
+            // st.style.left = pos + 'px'; 
+         st.style.left = pos1 + 'px'; 
+        }
+      }
+        </script>
+
+
+</html>

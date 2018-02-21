@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("div").append(localStorage.getItem(name));
+	
+	$("#out").click(function(){
+		console.log($("div").childNodes)
+		$("div").childNode[1].textContent.remove();
+		localStorage.removeItem(name);
+		
+	})
+
+})
+
+
+</script>
+</head>
+
+<body>
+<div>Welcome </div>
+<Button id="out">Signout</Button>
+</body>
+</html>

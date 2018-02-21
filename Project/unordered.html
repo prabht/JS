@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ul"><li >javascript</li><li >jquery</li><li >angularjs</li><li >nodejs</li></ul>
+    <button id="1">get first child</button>
+    <button id="2">get next sibling</button>
+    <button id="3">get last child</button>    
+    <button id="4">get previoussibling</button>
+    <button id="5">get parentnode</button>
+    <button id="6">get childnodes</button>
+    
+    <script>
+    var u=document.getElementById("ul");
+    var b1=document.getElementById("1");
+    var b2=document.getElementById("2");           
+    var b3=document.getElementById("3");           
+    var b4=document.getElementById("4");           
+    var b5=document.getElementById("5");  
+    var b6=document.getElementById("6");         
+
+        b1.addEventListener("mouseover",getfirst,true);
+       b1.getee
+    function getfirst(){
+        
+   alert(u.firstChild.textContent);
+    }
+    b2.addEventListener("click",getsib,true);
+    function getsib(){
+   alert(u.firstChild.nextSibling.textContent);
+    }
+    
+    b3.addEventListener("click",getlchild,true);
+    function getlchild(){
+        alert(u.lastChild.textContent);
+  
+    } 
+    b4.addEventListener("click",getpsib,true);
+    function getpsib(){
+        alert(u.lastChild.previousSibling.textContent);
+    }
+    b5.addEventListener("click",getparent,true);
+    function getparent(){
+        alert(u.nodeName);
+    }
+    b6.addEventListener("click",getChild,true);
+    function getChild(){
+        alert(u.ctextContent);
+    }
+    </script>
+</body>
+</html>

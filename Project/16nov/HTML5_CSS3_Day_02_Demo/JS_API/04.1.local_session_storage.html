@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+    $(document).ready(function(){
+		jQuery("#myBtn").click(function(){
+			if(window.Storage){
+				var uname = $("#uname").val();
+				sessionStorage.setItem("uname", uname);
+				window.location.href= "04.2.local_session_storage.html";
+			}
+			else{
+				alert("Not Supported By Browser");
+			}			
+		});
+});
+</script>
+</head>
+<body>
+	<h1>User SignIn </h1>
+	<label>Enter User Name:
+</label>
+	<input type="text" name="uname" id="uname" />
+	<input type="submit" id="myBtn" value="Click Me">
+</body>
+
+</html>

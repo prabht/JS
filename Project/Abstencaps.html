@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Abstraction and encapsulation</title>
+</head>
+<body>
+    <script>
+    function employee(n){
+        var name=n;
+        this.id=12;
+        var prifun=function(){
+        return name;
+        }
+
+        this.pubfun=function(){
+          x=prifun();
+            return x;
+        }
+
+    }
+    
+    var emp1=new employee("sdsd");
+    alert(emp1.pubfun());
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+	<table>
+		<tbody>
+			<tr>
+				<th>Personal Details</th>
+				<th><button id="2">Get Personal Details</button></th>
+			</tr>
+			<tr>
+				<td>First Name:</td>
+				<td><input type="text" id="fname" /></td>
+
+			</tr>
+			<tr>
+				<td>Last Name:</td>
+				<td><input type="text" id="lname" /></td>
+
+			</tr>
+			<tr>
+
+
+				<td>City:</td>
+				<td><input type="text" id="city" /></td>
+
+
+			</tr>
+			<tr>
+				<td>Contact:</td>
+				<td><input type="text" id="contact" /></td>
+
+			</tr>
+		</tbody>
+	</table>
+
+	<br>
+	<br>
+
+	<table>
+		<tbody>
+			<tr>
+				<th>Project Details</th>
+				<th><button id="1">Get Project Details</button></th>
+			</tr>
+			<tr>
+				<td>Project Id:</td>
+				<td><input type="text" id="pid" /></td>
+
+			</tr>
+			<tr>
+				<td>Project Location:</td>
+				<td><input type="text" id="pname" /></td>
+
+			</tr>
+
+		</tbody>
+	</table>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+$("#1").click = function xmlFunction() {
+					var url="XML.jsp";
+					$.ajax({
+						type:"POST",
+						url: url,
+						success:function(response) {
+								console.log(response);
+								$("#fname").val(response.getElementsByTagName("fname")[0].childNodes[0].textContent);
+								$("#lname").val(response.getElementsByTagName("lname")[0].childNodes[0].textContent);
+								$("#city").val(response.getElementsByTagName("city")[0].childNodes[0].textContent);
+								$("#contact").val(response.getElementsByTagName("contact")[0].childNodes[0	].textContent);
+
+							}
+						
+					})
+		}
+		})
+	/* 	function processResponse2() {
+			if (xmlhttp2.readyState == 4 && xmlhttp2.status == 200) {
+				var response = xmlhttp2.responseText;
+				var obj = JSON.parse(response);
+				console.log(obj);
+				document.getElementById("pid").value = obj.pid;
+				document.getElementById("pname").value = obj.pname;
+
+			}
+		} */
+	</script>
+</body>
+</html>

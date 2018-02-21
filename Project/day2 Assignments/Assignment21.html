@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+    <script>
+    var bank= [ 
+   {
+       name: 'JOHN',
+       account: 'Saving',
+       AccountStatus: 'blocked'
+   },
+   {
+       name: 'KATE ',
+       account: 'Current',
+       AccountStatus: 'active'
+   },
+   {
+       name: 'MIKE',
+       account:  'Saving', 
+       AccountStatus: 'active'
+   }];
+ 
+for (var k in bank) {
+    if (bank.hasOwnProperty(k)) {
+        var element = bank[k];
+        document.writeln("hey"+element.name+" Account:"+element.account);
+        if(element.AccountStatus=='active'){
+            document.writeln("Account is active <br>");
+        }
+        else
+        document.writeln("Activate your account <br>");
+        
+    }
+}
+
+    </script>
+
+</body>
+</html>

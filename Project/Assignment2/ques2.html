@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+        $(function () {
+            $("div").mouseover(function () {
+                $("div").css("background","red");
+                alert("Mouse over Event Occurred");          
+            })
+            $("div").trigger("mouseover");
+            
+            $("div").click(function () {
+                $("div").css("background","yellow");
+                alert("Click Event Occurred!");
+            })
+        })
+    </script>
+</head>
+<style>
+    .g{
+        background: green;
+    }
+    
+</style>
+<body>
+    <div style="width:200px;height:200px" class="g"></div>
+</body>
+</html>

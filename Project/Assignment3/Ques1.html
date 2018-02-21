@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    
+</head>
+<body>
+<script>
+    var obj1={
+    a:1,
+    b:[10,12],
+    c:"asdd"    
+    }
+    var obj2={
+    d:[10,2]
+    }
+    var obj3={
+    k:['asas']
+    }
+    $.extend(obj1,obj2,obj3);
+    console.log(JSON.stringify(obj1));
+    </script>    
+</body>
+</html>

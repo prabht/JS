@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Without Worker</title>
+        <meta charset="utf-8">        
+    </head>
+    <body>
+    <input type="button" value="Say Hello" onclick="sayHello()">
+    <input type="button" value="Big Loop" onclick="bigloop()">
+     <script>
+     function sayHello(){
+    	 alert("Hellooooooooooooo!!!");
+     }
+     
+     function bigloop(){
+    	 for(var i=0; i<10000000000; i++){
+    		 var no=i;
+    	 }
+    	 alert("Completed Iterations:"+no);
+    		 
+     }
+     </script>  
+    </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    
+    <script>
+        $(function(){
+          $("form :input:text").css("border","4px solid red");
+          $("form :checkbox:checked").before("checked:");
+          $("form :input:textarea").css("border","4px solid blue");  
+        //   $("form:input").css("border","4px solid red");  
+        //   $("form:input").css("border","4px solid red");              
+        });
+        
+    </script>
+</head>
+<body>
+    <form action="/" method="post">
+        <table class="style1">
+            <tbody>
+                <tr>
+                    <td class="style2">
+                        First Name
+                    </td>
+                    <td>
+                        <input id="input1" type="text"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style2">
+                        Last Name
+                    </td>
+                    <td>
+                        <input id="input2" type="text"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style2">
+                        Disabled Element
+                    </td>
+                    <td>
+                        <input id="d" type="text" disabled="disabled"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style2">
+                        Gender
+                    </td>
+                    <td>
+                        <input value="Male" type="radio" checked="checked" name="Gender"/>Male
+                        <input value="Female" type="radio" name="Gender"/>Female
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style2">
+                        what products are you interested in?
+                    </td>
+                    <td>
+                        <input id="checkbox1" type="checkbox" checked="checked"/><label for="checkbox1">Widgets</label>
+                        <input id="checkbox2" type="checkbox"/><label for="checkbox2">Hibbity Jibbities</label>
+                        <input id="checkbox3" type="checkbox" checked="checked"/><label for="checkbox3">splash</label>
+                        <input id="checkbox4" type="checkbox"/><label for="checkbox4">whatzits</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style2">
+                        Comments:
+                        
+                    </td>
+                    <td class="style2">
+                        <textarea id="Comments" cols="30" rows="5"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style2">
+                        Optional file story file
+                    </td>
+                    <td>
+                        <input id="File1" type="file"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style2">
+                        &nbsp;
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style2">
+                        &nbsp;
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="submit1" type="submit" value="Submit"/>
+                        <input id="reset1" type="reset" value="Reset"/>
+                    </td>
+                </tr>              
+            </tbody>
+
+        </table>
+    
+    
+    
+    </form>
+    
+</body>
+</html>

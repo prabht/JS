@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script>
+
+    $(function () {
+        $("body").append("<table style='border:100px solid'></table>");
+        for (var i = 1; i <= 3; i++) {
+            $("table").append("<tr id=r" + i + ">row" + i + "</tr>");
+            for (var j = 1; j <= 4; j++) {
+                $("#r" + i).append("<td id=c" +j+ ">column" + j + "</td>");
+            }
+        }
+
+        $("td").hover(function(){
+            console.log($(this).index());
+            var id=$(this).index()+1;
+            //console.log(id);
+            $("td:nth-child("+id+")").css("background","grey");
+            
+        })
+
+
+    })
+
+</script>
+
+<body></body>
+
+</html>

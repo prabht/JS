@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>inline semantic markup</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    
+</head>
+<body>
+    <p>this is an <mark>IMPORTANT</mark> para</p>
+    meter:<meter value="50" low="40" high="90" min="0" max="100" optimum"100"></meter>
+    meter:<meter value="30" low="40" high="90" min="0" max="100" optimum"100"></meter>
+    meter:<meter value="95" low="40" high="90" min="0" max="100" optimum"100"></meter><br>
+    Progress:<progress value="60" max="100"></progress>
+    Progress:<progress style="width:1000px;height:300px"></progress>
+    <br/>
+    <time datetime="14:00">02:00P.M</time><br/>
+    <input type="number" id="1"/>
+    <input type="number" id="2"/>
+    <output id="o"></output>
+    <script>
+        
+        
+        $(function(){
+           $("#2,#1").click(function(){
+           $("#o").val(parseInt($("#1").val())+parseInt($("#2").val()));
+           });
+        })
+    </script>
+
+</body>
+</html>

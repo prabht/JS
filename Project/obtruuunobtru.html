@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!-- <p id="p1" onclick="alert('dss')">this is para</p> -->
+<p id="p1">this is para</p>
+    <script>
+var p=document.getElementById("p1");    
+
+   
+p.addEventListener("click",sayHello,true);
+
+
+p.addEventListener("click",sayBye,true);
+
+
+function sayHello(){
+    // for (var i = 0; i < 20; i++) 
+    alert("hello");
+}
+
+
+function sayBye(){
+    alert("bye");
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<% 
+response.setContentType("text/xml");
+
+	out.println("<data><fname>Sruthi</fname><lname>P</lname><city>Mumbai</city><contact>3184</contact></data>");
+
+%>
+

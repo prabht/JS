@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script>
+    var t=0,c=0,k;
+    $(function () {
+        $("#div1").click(function(){
+            k=$.now();
+            if(c>=1)
+            alert("diff:"+(t=k-t));
+            c++;t=k;
+        })
+       
+    })
+</script>
+<body>
+    <div id="div1" style="width:300px;height:300px">First</div>
+
+    
+</body>
+</html>

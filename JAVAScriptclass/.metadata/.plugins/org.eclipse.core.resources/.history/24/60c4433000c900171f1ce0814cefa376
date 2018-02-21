@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>
+		Date:- <input type="text" id="datePicker1" /> Animate:- <select
+			id="animate1">
+			<option value="show">Show (default)</option>
+			<option value="bounce">Bounce</option>
+			<option value="clip">Clip</option>
+			<option value="drop">Show (default)</option>
+		</select>
+</body>
+</html>

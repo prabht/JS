@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script>
+    $(function () {
+        $("#idiv").click(function(){
+            alert("innermost div");
+        })
+        $("#mdiv").click(function(){
+            alert("middle div");
+        })
+        $("#odiv").click(function(){
+            alert("Outermost div");
+        })
+    })
+</script>
+
+<body>
+    <div id="odiv" style="background: blue" class="outer">OUTER
+        <div id="mdiv" style="background: red" class="outer">MIDDLE
+            <div id="idiv" class="outer" style="background:green">INNER</div>
+        </div>
+    </div>
+</body>
+
+</html>

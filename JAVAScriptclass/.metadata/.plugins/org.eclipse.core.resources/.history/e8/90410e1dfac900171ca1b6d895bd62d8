@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<table>
+	<tr>
+		<td><label>Username</label></td>
+		<td><input type="text"	id="username" /></td>
+	</tr>
+	
+	<tr><td><label>Password</label></td>
+		<td><input type="text"	id="pass" /></td>
+	</tr>
+</table>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+$(function(){
+	$("#pass").blur(function() {
+		
+		var url="requestProcessor.jsp";
+		$.ajax({
+			type:"POST",
+			url: url,
+			data:{
+				username:$("#username").val();
+				pass:$("#pass").val()
+			},
+			success:function(response){
+		
+				console.log(response);	
+				
+			}
+				
+		})
+	})
+})
+</script>
+	
+</body>
+</html>

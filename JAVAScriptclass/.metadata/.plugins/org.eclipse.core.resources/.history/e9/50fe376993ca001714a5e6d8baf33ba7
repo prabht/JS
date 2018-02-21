@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Geolocation</title>
+</head>
+<body>
+<script type="text/javascript">
+if(navigator.geolocation){
+	navigator.geolocation.getCurrentPosition(function(position)){
+		var lat=position.coords.latitude;
+		var lon=position.coords.l;
+	})
+}
+</script>
+</body>
+</html>

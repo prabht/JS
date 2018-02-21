@@ -1,0 +1,13 @@
+UserName:<input type="text" #uval [(ngModel)]="name" /><br>
+Password:<input type="password" #pass [value]="password" >
+<input (click)="login()" type="submit">
+<button (click)="logout()">logout</button>
+
+value in class:{{name}}<br>
+value in view:{{uval.value}}
+
+<a routerLink="admin">Mobiles</a>
+<a routerLink="user">Laptops</a>
+<router-outlet></router-outlet>
+
+

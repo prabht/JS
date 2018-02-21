@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    
+    <script>
+    var prabhav=$.noConflict();
+        prabhav(function () {
+            var b1 = 0, b2 = 0;
+           
+            prabhav("#1").on("click", function () {
+                b1++;
+                prabhav("p:first").text("button1 clicks:"+b1)
+            });
+
+            prabhav("#2").on("click", function () {
+                b2++; prabhav("#1").trigger("click");
+                prabhav("p:last").text("button2 clicks:"+b2);
+            });
+
+        })
+    </script>
+
+</head>
+
+
+<body>
+    <button id="1">Button1</button>
+    <button id="2">Button2</button>
+<p id="o1"></p>
+<p id="o2"></p>
+
+
+</body>
+
+</html>

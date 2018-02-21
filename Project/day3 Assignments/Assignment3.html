@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        document.onreadystatechange = function () {
+            var o = document.getElementById("result");
+            var f = document.getElementById("first");
+
+            var b1 = document.getElementById("b1");
+            var b2 = document.getElementById("b2");
+            var b3 = document.getElementById("b3");
+            var b4 = document.getElementById("b4");
+            var res = document.getElementById("result");
+            var clr = document.getElementById("clear");
+            
+
+            b1.addEventListener("click", add, true);
+            b2.addEventListener("click", sub, true);
+            b3.addEventListener("click", mul, true);
+            b4.addEventListener("click", div, true);
+            res.addEventListener("click", gres, true);
+            clr.addEventListener("click", clear, true);
+            
+            var r = 0;
+            function add() {
+                r += parseInt(f.value);
+            }
+
+            function sub() {
+                r -= parseInt(f.value);
+            }
+            function mul() {
+                r *= parseInt(f.value);
+            }
+            function div() {
+                r /= parseInt(f.value);
+            }
+            function gres() {
+                document.getElementById("final").value = ("Result is:" + r);
+            }
+            function clear() {
+                document.getElementById("final").value="";
+                r=0;
+            }
+            
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <input type="text" id="first" size="5px">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit" id="b1">Add
+                    <button type="submit" id="b2">subtract
+                        <button type="submit" id="b3">Multiply
+                            <button type="submit" id="b4">Divide</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="result">Result</button>
+                <button id="clear">Clear</button>
+                <output id="final"></output>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

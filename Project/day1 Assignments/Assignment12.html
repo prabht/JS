@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+<script>
+    window.onload=function(){
+    var count=prompt("enter num of lines");
+    var n=parseInt(count);
+    for (var i = 0; i <n ; i++) {
+        var a="";
+        for (var j = 0; j <= i; j++) {
+            a+="*";
+        }
+        console.log(a);
+        document.writeln(a+"<br>");
+   // document.getElementById("b").innerHTML=(a+"<br>");
+
+    }
+
+    }
+
+</script>
+
+
+
+</head>
+<body  >
+    <p id="b"></p>
+    
+</body>
+</html>

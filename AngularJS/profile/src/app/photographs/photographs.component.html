@@ -1,0 +1,12 @@
+<table>
+  <tr *ngFor="let photo of photos">
+    <td>albumId{{photo.albumId}}</td>
+    <td>Id{{photo.id}}</td>
+    <td>Title{{photo.title}}</td>
+    <td><img [src]="photo.url" width='100px' height='100px'/></td>
+    <td><img [src]="photo.thumbnailUrl" width='10px' height='10px'/></td>  
+    
+    <!-- <td *ngIf="isAdmin"><button (click)="remove(i)">Delete</button></td>
+    <td><button [disabled]="!isAdmin">Edit</button></td> -->
+  </tr>
+</table>

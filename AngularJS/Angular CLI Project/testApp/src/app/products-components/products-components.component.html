@@ -1,0 +1,20 @@
+<p>
+  products-components works!
+</p>
+Search Key:<input type="text" #search (keyup)="validate(search.value)"/>{{search.value}}
+<table>
+  <tr *ngFor="let product of products;let i=index;">
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.qty}}</td>
+    <!-- <td><img src="{{product.imgPath}}"/></td> -->
+    <td><img [src]="product.imgPath"/></td>
+    <td *ngIf="isAdmin"><button (click)="remove(i)">Delete</button></td>
+    <td><button [disabled]="!isAdmin">Edit</button></td>
+    <td><button (click)="add(product)" (click)="remove(i)">Add To Cart</button></td>
+    
+  </tr>
+</table>
+
+<!-- <app-mp></app-mp> -->

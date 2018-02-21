@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script>
+    $(function () {
+        //to get text Content
+        //alert($("#list1").text());
+        //alert($("#list1").html());
+        //to set text
+        //$("#list2").text("<li>this is a new item</li>");
+        //to set html content
+        // $("#list2").html("<li>this is a new item</li>");
+        //$("p:last").text("this is updated one");
+
+        //elements on the fly            
+        // var mypara=$("<p>this is a new para</p>")
+        // $("#para3").html(mypara);\
+
+        //to append it with the existing 
+        // $("#para3").append("with dynamic text");
+
+        // $("#para1").appendTo("p:last");
+
+        //attributes
+        //set the attributes
+        // $("#b").click(function(){
+        //     $("a").attr('target',$("img").attr('src','Desert.jpg'))
+        // })
+        //$("a").removeAttr("href");
+
+        //wrapping
+        //$("p").wrap("<div style='border: 3px solid blue'></div>");
+        // $("p").wrapAll("<div style='border: 3px solid blue'></div>");
+        //$("ul").empty();
+        //$("ul").remove();
+
+        //$("#para3").clone().appendTo("#para1");
+        //        $("#para3").replaceWith($("#para1").html()); 
+        // $("#para3").replaceWith("asas"); 
+        //$("#para3").replaceWith($('#para1'));
+        // var elems=$("#list1").get();
+        // alert(elems.length);   
+        $("ul").find("li.b").css("border", "3px solid");//find all lists with class b
+
+
+    });
+</script>
+
+<body>
+    <a href="C:\Users\Public\Pictures\Sample Pictures\Chrysanthemum.jpg">
+        <img src="C:\Users\Public\Pictures\Sample Pictures\Chrysanthemum.jpg" alt="efefef">
+    </a>
+    <ul id="list2"></ul>
+    <ul id="list1">
+        <li class="a">item1</li>
+        <li class="a">item2</li>
+        <li class="b">item3</li>
+        <li class="b">item4</li>
+    </ul>
+    <p id="para1" class="a">this is para1</p>
+    <p>this is para2</p>
+    <ul id="list3">
+        <li>item1</li>
+        <li>item2</li>
+    </ul>
+    <p id="para3" class="b">this is para3</p>
+    <p class="b">this is para4</p>
+    <button id="b">click</button>
+
+</body>
+
+</html>

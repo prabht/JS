@@ -1,0 +1,18 @@
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <button class="btn btn-outline-success"  routerLink='list' type="button" (click)="change()">TODOLIST</button>
+    <button class="btn btn-sm align-middle btn-outline-secondary" routerLink='completed'  type="button">Completed</button>
+    <button class="btn btn-sm align-middle btn-outline-secondary" routerLink='pending' type="button">pending</button>
+    <button class="btn btn-sm align-middle btn-outline-secondary" routerLink='summ' type="button">Summary</button>
+    
+    
+  
+
+    <!-- <span class="input-group-addon" id="basic-addon1">@</span> -->
+    <!-- <input type="text" class="form-control"  aria-label="Name" aria-describedby="basic-addon1" align="right" #name ngModel={{name.value}} value="{{user}}" ngModel> -->
+  </form>
+  <span class="input-group-addon" id="basic-addon1">Welcome,
+  <input type="text" class="form-control"  aria-label="Username" aria-describedby="basic-addon1"  #wname value="{{user}}" [(ngModel)]="user" (keyup.enter)="changen(wname.value)">
+</span>
+</nav>
+<router-outlet></router-outlet>

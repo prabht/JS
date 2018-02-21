@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Web Storage</title>
+</head>
+<body>
+<script type="text/javascript">
+
+if(localStorage.visitorHits){
+	document.write("Visitor Hits:"+(localStorage.visitorHits=Number(localStorage.visitorHits)));
+}
+</script>
+</body>
+</html>

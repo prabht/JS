@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+
+    <style>
+    </style>
+    <script>
+        $(function () {
+            $("#in").click(function(){
+                $("#di").fadeIn("fast");
+            })
+       
+        $("#out").click(function(){
+                $("#di").fadeOut(2000,"easeInBounce");
+            })
+       
+    
+        $("#3").click(function(){
+                $("#di").fadeTo(2000,0.3);
+            })
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="di" style="background:black;width:500px;height:500px">the DIv!</div>
+    <button id="in">Fadein</button>
+    <button id="out">FadeOut</button>
+    <button id="3">Fadeto3</button>
+
+</body>
+
+</html>

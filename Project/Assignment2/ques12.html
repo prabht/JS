@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script>
+    $(function(){
+        
+        $("#b").click(function(){
+            if($("input[name='agree']:checked").val()=="on"){
+            $("<div id='d1'><h1>You Entered Details:</h1></div>").insertAfter("#b");
+            $("#d1").append("Name:"+$("#n").val()+"<br>");
+            $("#d1").append("Address:"+$("#a").val()+"<br>");
+            $("#d1").append("No.of pizza:"+$("#no").val()+"<br>");
+            if($("input[name='s']:checked"))
+            $("#d1").append("Shape:"+$("input[name='s']:checked").val()+"<br>");
+            
+        }
+        
+        })
+    })
+    </script>    
+</head>
+
+<body>
+         Customer Name: <input type="text" id="n" /> 
+         Address: <input type="textarea" id="a"/>
+         No of Pizza’s: <input type="number" id="no"/>
+         Shape of pizza-<input type="radio" name="s" value="circle"/>circle
+         <input type="radio" name="s" value="Square"/>square
+         Agree to terms and conditions:<input  id="c"type="checkbox" name="agree"/>
+         Confirm: <button id="b" type="submit" >SUBMIT</button>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var count=(function(){
+        var hits=0;console.log("outer");
+        function innerCount(){
+            console.log("inner");
+            return ++hits;
+        } 
+        return innerCount;
+    })();
+    
+    
+    console.log(count());
+    console.log(count());
+    console.log(count());
+    
+
+    </script>
+</body>
+</html>

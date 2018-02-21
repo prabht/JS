@@ -1,0 +1,5 @@
+UserName:<input type="text" #uval [(ngModel)]="name" /><br>
+Password:<input type="password" #pass [value]="password" >
+<input (click)="validate(uval.value,pass.value)" type="submit">
+value in class:{{name}}<br>
+value in view:{{uval.value}}

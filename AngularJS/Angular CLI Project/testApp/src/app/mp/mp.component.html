@@ -1,0 +1,9 @@
+<table>Filtered Mobile Products
+  <tr *ngFor="let product of mproducts">
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <!-- <td><img src="{{product.imgPath}}"/></td> -->
+    <td><img [src]="product.imgPath"/></td>
+  </tr>
+</table>

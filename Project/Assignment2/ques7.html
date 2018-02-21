@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script>
+    
+    $(function () {
+        $("#b1").click(function(){
+         $("ul").find("li").append(" in the List!");
+        })
+       
+    })
+</script>
+<body>
+   <ul>
+       <li>list1</li>
+       <li>list2</li>
+       <li>list3</li>
+       <li>list4</li>
+   </ul>
+<button id="b1">Append</button>
+
+    
+</body>
+</html>

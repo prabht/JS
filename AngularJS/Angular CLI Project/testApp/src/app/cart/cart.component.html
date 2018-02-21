@@ -1,0 +1,14 @@
+<p>
+  cart works!
+</p>
+<table>
+    <tr *ngFor="let product of prod;let i=index;">
+      <td>{{product.id}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.qty}}</td>
+      <!-- <td><img src="{{product.imgPath}}"/></td> -->
+      <td><img [src]="product.imgPath" (click)="remove(product,i)" /></td>
+      <!-- <td><button (click)="remove(i)" (click)="add(p)">Delete</button></td> -->
+    </tr>
+  </table>

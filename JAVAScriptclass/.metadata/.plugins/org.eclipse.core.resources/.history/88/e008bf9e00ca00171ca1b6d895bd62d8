@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(function(){
+	$("#empid").blur(function() {console.log("fdsfgf");
+		
+		var url="requestProcessorXML.jsp";
+		$.ajax({
+			type:"POST",
+			url: url,
+			data:{
+				empid:$("#empid").val()
+			},
+			success:function(response){
+		
+				console.log(response);	
+				
+				
+				//var temp=response.split(",");
+				document.getElementById("name").value=response.getElementsByTagName("data")[0].childNodes[0].textContent;
+				
+				document.getElementById("company").value=response.getElementsByTagName("data")[0].childNodes[1].textContent;
+				
+			}
+				
+		})
+	})
+})
+</script>
+</head>
+<body>
+
+<table>
+	<tr>
+		<td><label>Employee ID</label></td>
+		<td><input type="text"	id="empid" /></td>
+	</tr>
+	
+	<tr>
+		<td><label>Employee Name</label></td>
+		<td><input type="text"	id="name" /></td>
+	</tr>
+	
+	<tr>
+		<td><label>Employee Company</label></td>
+		<td><input type="text"	id="company" /></td>
+	</tr>
+
+</table>
+<script>
+
+
+</script>	
+</body>
+</html>

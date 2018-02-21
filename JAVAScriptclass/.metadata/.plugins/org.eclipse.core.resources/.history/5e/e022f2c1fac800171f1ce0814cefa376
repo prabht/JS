@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Jingle</title>
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+<script src="jquery.watermark.min.js"></script>
+
+<script>
+    $(function(){
+        $("img").watermark({
+                text:"water",
+                textSize:40,
+                textWidth:500,
+                margin:30
+            });
+        $("#date1").mask("99/99/9999",{
+        	placeholder:"mm/dd/yyyy",
+        	completed:function() {
+        		alert("Entered date is :"+this.val());
+        	}
+        
+        })
+        $("#phone1").mask("(999)999-9999");
+       	$("#productk").mask("a*-999-a999");
+    });
+   
+</script>
+<style>
+#div1 {
+width:100px;
+height:100px;
+padding:05em;
+background-color:yellow;
+}
+#div2 {
+width:100px;
+height:100px;
+padding:05em;
+background-color:yellow;
+}
+
+</style>
+</head>
+
+<body>
+	<div id="div1" >DIV1</div>
+	<div id="div2" >DIV2</div>
+</body>
+
+</html>
